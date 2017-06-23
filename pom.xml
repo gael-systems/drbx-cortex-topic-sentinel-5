@@ -1,0 +1,26 @@
+<project>
+
+   <modelVersion>4.0.0</modelVersion>
+
+   <groupId>fr.gael.drb</groupId>
+   <artifactId>drbx-cortex-topic-sentinel-5p</artifactId>
+   <packaging>jar</packaging>
+   <version>0.0.1</version>
+
+   <name>Drbx Cortex Topic for Sentinel-5P</name>
+
+   <parent>
+      <groupId>fr.gael</groupId>
+      <artifactId>maven</artifactId>
+      <version>1-0-rc-4</version>
+   </parent>
+
+   <dependencies>
+      <dependency>
+         <groupId>fr.gael.drb</groupId>
+         <artifactId>drbx-impl-netcdf</artifactId>
+         <version>1.0.11</version>
+      </dependency>
+   </dependencies>
+
+</project>
