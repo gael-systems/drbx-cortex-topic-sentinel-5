@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<!DOCTYPE rdf:RDF [
+   <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+   <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+   <!ENTITY nc "http://www.unidata.ucar.edu/netcdf#">
+   <!ENTITY s5p "http://www.esa.int/s5p#">
+   <!ENTITY drb "http://www.gael.fr/drb#">
+]>
+
+<rdf:RDF xmlns:owl="&owl;"
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+         xmlns:drb="&drb;"
+         xmlns:nc="&nc;"
+         xmlns:s5p="&s5p;"
+         xml:base="&s5p;">
+
+<!--
+* Data Hub Service (DHuS) - For Space data distribution.
+* Copyright (C) 2017 GAEL Systems
+* Copyright (C) 2017 SERCO Spa
+* Copyright (C) 2017 ESA
+*
+* This file is part of DHuS software sources.
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Affero General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU Affero General Public License for more details.
+*
+* You should have received a copy of the GNU Affero General Public License
+* along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+   <owl:Ontology rdf:about="&s5p;">
+      <rdfs:label xml:lang="en">Sentinel-5P Ontology</rdfs:label>
+   </owl:Ontology>
+
+   <!-- ========================================= -->
+   <!-- Sentinel-5P Product                       -->
+   <!-- ========================================= -->
+
+   <owl:Class rdf:about="&s5p;product">
+      <rdfs:label xml:lang="en">Sentinel-5P Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&nc;netCDF"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ========================================= -->
+   <!-- Sentinel-5P Level-1B Product              -->
+   <!-- ========================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel1B">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-1B Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;product"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L1B.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ========================================= -->
+   <!-- Sentinel-5P Level-2 Product               -->
+   <!-- ========================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel2">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-2 Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;product"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L2.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+</rdf:RDF>
