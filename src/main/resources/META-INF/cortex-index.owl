@@ -44,7 +44,9 @@
    </owl:Ontology>
 
    <!-- ========================================= -->
+   <!-- ========================================= -->
    <!-- Sentinel-5P Product                       -->
+   <!-- ========================================= -->
    <!-- ========================================= -->
 
    <owl:Class rdf:about="&s5p;product">
@@ -58,7 +60,9 @@
    </owl:Class>
 
    <!-- ========================================= -->
+   <!-- ========================================= -->
    <!-- Sentinel-5P Level-1B Product              -->
+   <!-- ========================================= -->
    <!-- ========================================= -->
 
    <owl:Class rdf:about="&s5p;productLevel1B">
@@ -71,8 +75,164 @@
       </drb:signature>
    </owl:Class>
 
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-1B: Irradiances UVN Product                 -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel1BIrUvn">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-1B: Irradiances UVN Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel1B"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L1B_IR_UVN.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-1B: Irradiances SIR Product                 -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel1BIrSir">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-1B: Irradiances SIR Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel1B"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L1B_IR_SIR.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-1B: Radiances Product                       -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel1BRa">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-1B: Radiances Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel1B"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L1B_RA_BD[1-8].*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-1B: Radiances BD1 Product                   -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel1BRaBd1">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-1B: Radiances BD1 Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel1B"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L1B_RA_BD1.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-1B: Radiances BD2 Product                   -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel1BRaBd2">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-1B: Radiances BD2 Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel1B"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L1B_RA_BD2.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-1B: Radiances BD3 Product                   -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel1BRaBd3">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-1B: Radiances BD3 Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel1B"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L1B_RA_BD3.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-1B: Radiances BD4 Product                   -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel1BRaBd4">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-1B: Radiances BD4 Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel1B"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L1B_RA_BD4.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-1B: Radiances BD5 Product                   -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel1BRaBd5">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-1B: Radiances BD5 Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel1B"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L1B_RA_BD5.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-1B: Radiances BD6 Product                   -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel1BRaBd6">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-1B: Radiances BD6 Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel1B"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L1B_RA_BD6.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-1B: Radiances BD7 Product                   -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel1BRaBd7">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-1B: Radiances BD7 Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel1B"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L1B_RA_BD7.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-1B: Radiances BD8 Product                   -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel1BRaBd8">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-1B: Radiances BD8 Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel1B"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L1B_RA_BD8.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ========================================= -->
    <!-- ========================================= -->
    <!-- Sentinel-5P Level-2 Product               -->
+   <!-- ========================================= -->
    <!-- ========================================= -->
 
    <owl:Class rdf:about="&s5p;productLevel2">
@@ -82,6 +242,188 @@
       <rdfs:subClassOf rdf:resource="&s5p;product"/>
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-2: O3 Full Profile Product                  -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel2O3Pr">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-2: O3 Full Profile Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel2"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L2__O3__PR.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-2: O3 Tropospheric Profile Product          -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel2O3Tpr">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-2: O3 Tropospheric Profile Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel2"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L2__O3_TPR.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-2: NO2 Tropospheric Column Product          -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel2NO2">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-2: NO2 Tropospheric Column Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel2"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L2__NO2___.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-2: CH4 Product                              -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel2CH4">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-2: CH4 Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel2"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L2__CH4___.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-2: CO Total Column Product                  -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel2CO">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-2: CO Total Column Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel2"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L2__CO____.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-2: Aerosol Layer Height Product             -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel2AerLH">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-2: Aerosol Layer Height Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel2"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L2__AER_LH.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-2: Aerosol Index Product                    -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel2AerAI">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-2: Aerosol Index Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel2"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L2__AER_AI.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-2: KNMI Cloud Support Product               -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel2Fresco">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-2: KNMI Cloud Support Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel2"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L2__FRESCO.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-2: Cloud Product                            -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel2Cloud">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-2: Cloud Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel2"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L2__CLOUD_.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-2: Formaldehyde Product                     -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel2HCHO">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-2: Formaldehyde Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel2"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L2__HCHO__.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-2: Sulphur Dioxide Product                  -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel2SO2">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-2: Sulphur Dioxide Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel2"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L2__SO2___.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-2: Ozone Total Column Product               -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel2O3">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-2: Ozone Total Column Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel2"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L2__O3____.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Level-2: Ozone Tropospheric Column Product        -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;productLevel2O3TCL">
+      <rdfs:label xml:lang="en">Sentinel-5P Level-2: Ozone Tropospheric Column Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;productLevel2"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._L2__O3_TCL.*</drb:nameMatch>
       </drb:signature>
    </owl:Class>
 
