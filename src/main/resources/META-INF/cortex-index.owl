@@ -20,7 +20,6 @@
 <!--
 * Data Hub Service (DHuS) - For Space data distribution.
 * Copyright (C) 2017 GAEL Systems
-* Copyright (C) 2017 SERCO Spa
 * Copyright (C) 2017 ESA
 *
 * This file is part of DHuS software sources.
@@ -424,6 +423,176 @@
       <rdfs:subClassOf rdf:resource="&s5p;productLevel2"/>
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__O3_TCL.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ========================================= -->
+   <!-- ========================================= -->
+   <!-- Sentinel-5P Auxiliary Product             -->
+   <!-- ========================================= -->
+   <!-- ========================================= -->
+
+   <owl:Class rdf:about="&s5p;auxiliary">
+      <rdfs:label xml:lang="en">Sentinel-5P Auxiliary Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&nc;netCDF"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._AUX.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Auxiliary: Meteo files (abstract)                 -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;auxiliaryMeteo">
+      <rdfs:label xml:lang="en">Sentinel-5P Auxiliary Product: Meteo (Abstract)</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;auxiliary"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._AUX_MET_.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Auxiliary: ECMWF temperature profiles             -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;auxiliaryMetTp">
+      <rdfs:label xml:lang="en">Sentinel-5P Auxiliary Product: ECMWF temperature profiles</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;auxiliaryMeteo"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._AUX_MET_TP.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Auxiliary: ECMWF specific humidity profiles       -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;auxiliaryMetQp">
+      <rdfs:label xml:lang="en">Sentinel-5P Auxiliary Product: ECMWF specific humidity profiles</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;auxiliaryMeteo"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._AUX_MET_QP.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Auxiliary: ECMWF 2D surface fields                -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;auxiliaryMet2D">
+      <rdfs:label xml:lang="en">Sentinel-5P Auxiliary Product: ECMWF 2D surface fields</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;auxiliaryMeteo"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._AUX_MET_2D.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Auxiliary: NISE snow and ice                      -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;auxiliaryNise">
+      <rdfs:label xml:lang="en">Sentinel-5P Auxiliary Product: NISE snow and ice</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;auxiliary"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._AUX_NISE__.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Auxiliary: NO2 profile data (forecast mode)       -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;auxiliaryNO2Forecast">
+      <rdfs:label xml:lang="en">Sentinel-5P Auxiliary Product: NO2 profile data (forecast mode)</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;auxiliary"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._AUX_CTMFCT.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Auxiliary: NO2 profile data (assimilation mode)   -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;auxiliaryNO2Assimilation">
+      <rdfs:label xml:lang="en">Sentinel-5P Auxiliary Product: NO2 profile data (assimilation mode)</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;auxiliary"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._AUX_CTMANA.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Auxiliary: CO a priori profiles                   -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;auxiliaryCO">
+      <rdfs:label xml:lang="en">Sentinel-5P Auxiliary Product: CO a priori profiles</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;auxiliary"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._AUX_CTM_CO.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Auxiliary: CH4 a priori profiles                  -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;auxiliaryCH4">
+      <rdfs:label xml:lang="en">Sentinel-5P Auxiliary Product: CH4 a priori profiles</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;auxiliary"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._AUX_CTMCH4.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Auxiliary: BGSO2 Background Correction            -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;auxiliaryBGSO2">
+      <rdfs:label xml:lang="en">Sentinel-5P Auxiliary Product: BGSO2 Background Correction</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;auxiliary"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._AUX_BGSO2_.*</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
+   <!-- Sentinel-5P Auxiliary: BGHCHO Background Correction           -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;auxiliaryBGHCHO">
+      <rdfs:label xml:lang="en">Sentinel-5P Auxiliary Product: BGHCHO Background Correction</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&s5p;auxiliary"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)S5P_...._AUX_BGHCHO.*</drb:nameMatch>
       </drb:signature>
    </owl:Class>
 
