@@ -443,6 +443,25 @@
    </owl:Class>
 
    <!-- ============================================================= -->
+   <!-- Sentinel-5P Auxiliary: NISE snow and ice                      -->
+   <!-- ============================================================= -->
+   <!-- Attention:                                                    -->
+   <!-- This product is not subClassOf Sentinel-5P Auxiliary Product  -->
+   <!-- since it is not a &nc;netCDF and signature does not follow    -->
+   <!-- "(?i)S5P_...._AUX.*"                                          -->
+   <!-- ============================================================= -->
+
+   <owl:Class rdf:about="&s5p;auxiliaryNise">
+      <rdfs:label xml:lang="en">Sentinel-5P Auxiliary Product: NISE snow and ice</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&nc;HDFEOS"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>(?i)NISE_........_........\.HDFEOS</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ============================================================= -->
    <!-- Sentinel-5P Auxiliary: Meteo files (abstract)                 -->
    <!-- ============================================================= -->
 
@@ -495,20 +514,6 @@
       <rdfs:subClassOf rdf:resource="&s5p;auxiliaryMeteo"/>
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._AUX_MET_2D.*</drb:nameMatch>
-      </drb:signature>
-   </owl:Class>
-
-   <!-- ============================================================= -->
-   <!-- Sentinel-5P Auxiliary: NISE snow and ice                      -->
-   <!-- ============================================================= -->
-
-   <owl:Class rdf:about="&s5p;auxiliaryNise">
-      <rdfs:label xml:lang="en">Sentinel-5P Auxiliary Product: NISE snow and ice</rdfs:label>
-      <rdfs:comment xml:lang="en">
-      </rdfs:comment>
-      <rdfs:subClassOf rdf:resource="&s5p;auxiliary"/>
-      <drb:signature rdf:parseType="Resource">
-         <drb:nameMatch>(?i)S5P_...._AUX_NISE__.*</drb:nameMatch>
       </drb:signature>
    </owl:Class>
 
