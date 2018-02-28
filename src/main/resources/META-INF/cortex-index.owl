@@ -7,6 +7,7 @@
    <!ENTITY nc "http://www.unidata.ucar.edu/netcdf#">
    <!ENTITY s5p "http://www.esa.int/s5p#">
    <!ENTITY drb "http://www.gael.fr/drb#">
+   <!ENTITY img "http://www.gael.fr/drb/image#">
 ]>
 
 <rdf:RDF xmlns:owl="&owl;"
@@ -14,6 +15,7 @@
          xmlns:rdfs="&rdfs;"
          xmlns:drb="&drb;"
          xmlns:nc="&nc;"
+         xmlns:img="&img;"
          xmlns:s5p="&s5p;"
          xml:base="&s5p;">
 
@@ -256,6 +258,23 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__O3__PR.*</drb:nameMatch>
       </drb:signature>
+      <!-- Image descriptor -->  
+      <img:descriptor rdf:parseType="Literal">
+         <raster name="o3profile">
+            <width>
+               root/groups/PRODUCT/variables/ozone_total_column/shape[3]
+            </width>
+            <height>
+               root/groups/PRODUCT/variables/ozone_total_column/shape[2]
+            </height>
+            <bandNumber>
+               root/groups/PRODUCT/variables/ozone_total_column/shape[1]
+            </bandNumber>
+            <data sampleModel="banded" type="'Float'">
+               fn:data(root/groups/PRODUCT/dataset/ozone_total_column/time/scanline/ground_pixel)               
+            </data>
+          </raster>
+      </img:descriptor>
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -270,6 +289,23 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__O3_TPR.*</drb:nameMatch>
       </drb:signature>
+      <!-- Image descriptor -->  
+      <img:descriptor rdf:parseType="Literal">
+         <raster name="o3tclprofile">
+            <width>
+               root/groups/PRODUCT/variables/ozone_tropospheric_column/shape[3]
+            </width>
+            <height>
+               root/groups/PRODUCT/variables/ozone_tropospheric_column/shape[2]
+            </height>
+            <bandNumber>
+               root/groups/PRODUCT/variables/ozone_tropospheric_column/shape[1]
+            </bandNumber>
+            <data sampleModel="banded" type="'Float'">
+               fn:data(root/groups/PRODUCT/dataset/ozone_tropospheric_column/time/scanline/ground_pixel)               
+            </data>
+          </raster>
+      </img:descriptor>
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -284,6 +320,23 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__NO2___.*</drb:nameMatch>
       </drb:signature>
+      <!-- Image descriptor -->  
+      <img:descriptor rdf:parseType="Literal">
+         <raster name="no2">
+            <width>
+               root/groups/PRODUCT/variables/nitrogendioxide_tropospheric_column/shape[3]
+            </width>
+            <height>
+               root/groups/PRODUCT/variables/nitrogendioxide_tropospheric_column/shape[2]
+            </height>
+            <bandNumber>
+               root/groups/PRODUCT/variables/nitrogendioxide_tropospheric_column/shape[1]
+            </bandNumber>
+            <data sampleModel="banded" type="'Float'">
+               fn:data(root/groups/PRODUCT/dataset/nitrogendioxide_tropospheric_column/time/scanline/ground_pixel)               
+            </data>
+          </raster>
+      </img:descriptor>
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -298,6 +351,23 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__CH4___.*</drb:nameMatch>
       </drb:signature>
+      <!-- Image descriptor -->  
+      <img:descriptor rdf:parseType="Literal">
+         <raster name="ch4">
+            <width>
+               root/groups/PRODUCT/variables/methane_mixing_ratio/shape[3]
+            </width>
+            <height>
+               root/groups/PRODUCT/variables/methane_mixing_ratio/shape[2]
+            </height>
+            <bandNumber>
+               root/groups/PRODUCT/variables/methane_mixing_ratio/shape[1]
+            </bandNumber>
+            <data sampleModel="banded" type="'Float'">
+               fn:data(root/groups/PRODUCT/dataset/methane_mixing_ratio/time/scanline/ground_pixel)               
+            </data>
+          </raster>
+      </img:descriptor>
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -312,6 +382,23 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__CO____.*</drb:nameMatch>
       </drb:signature>
+      <!-- Image descriptor -->  
+      <img:descriptor rdf:parseType="Literal">
+         <raster name="co">
+            <width>
+               root/groups/PRODUCT/variables/carbonmonoxide_total_column/shape[3]
+            </width>
+            <height>
+               root/groups/PRODUCT/variables/carbonmonoxide_total_column/shape[2]
+            </height>
+            <bandNumber>
+               root/groups/PRODUCT/variables/carbonmonoxide_total_column/shape[1]
+            </bandNumber>
+            <data sampleModel="banded" type="'Float'">
+               fn:data(root/groups/PRODUCT/dataset/carbonmonoxide_total_column/time/scanline/ground_pixel)               
+            </data>
+          </raster>
+      </img:descriptor>
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -326,6 +413,23 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__AER_LH.*</drb:nameMatch>
       </drb:signature>
+      <!-- Image descriptor -->  
+      <img:descriptor rdf:parseType="Literal">
+         <raster name="aerlh">
+            <width>
+               root/groups/PRODUCT/variables/aerosol_mid_height/shape[3]
+            </width>
+            <height>
+               root/groups/PRODUCT/variables/aerosol_mid_height/shape[2]
+            </height>
+            <bandNumber>
+               root/groups/PRODUCT/variables/aerosol_mid_height/shape[1]
+            </bandNumber>
+            <data sampleModel="banded" type="'Float'">
+               fn:data(root/groups/PRODUCT/dataset/aerosol_mid_height/time/scanline/ground_pixel)               
+            </data>
+          </raster>
+      </img:descriptor>
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -340,6 +444,24 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__AER_AI.*</drb:nameMatch>
       </drb:signature>
+      <!-- Image descriptor -->  
+      <img:descriptor rdf:parseType="Literal">
+         <raster name="aerai">
+            <width>
+               root/groups/PRODUCT/variables/aerosol_index_340_380/shape[3]
+            </width>
+            <height>
+               root/groups/PRODUCT/variables/aerosol_index_340_380/shape[2]
+            </height>
+            <bandNumber>
+               root/groups/PRODUCT/variables/aerosol_index_340_380/shape[1]
+            </bandNumber>
+            <data sampleModel="banded" type="'Float'">
+               fn:data(root/groups/PRODUCT/dataset/aerosol_index_340_380/time/scanline/ground_pixel)               
+            </data>
+          </raster>
+      </img:descriptor>
+      
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -354,6 +476,23 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__FRESCO.*</drb:nameMatch>
       </drb:signature>
+      <!-- Image descriptor -->  
+      <img:descriptor rdf:parseType="Literal">
+         <raster name="fresco">
+            <width>
+               root/groups/PRODUCT/variables/cloud_fraction_crb/shape[3]
+            </width>
+            <height>
+               root/groups/PRODUCT/variables/cloud_fraction_crb/shape[2]
+            </height>
+            <bandNumber>
+               root/groups/PRODUCT/variables/cloud_fraction_crb/shape[1]
+            </bandNumber>
+            <data sampleModel="banded" type="'Float'">
+               fn:data(root/groups/PRODUCT/dataset/cloud_fraction_crb/time/scanline/ground_pixel)               
+            </data>
+          </raster>
+      </img:descriptor>
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -368,6 +507,24 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__CLOUD_.*</drb:nameMatch>
       </drb:signature>
+      
+      <!-- Image descriptor -->  
+      <img:descriptor rdf:parseType="Literal">
+         <raster name="cloud">
+            <width>
+               root/groups/PRODUCT/variables/cloud_fraction/shape[3]
+            </width>
+            <height>
+               root/groups/PRODUCT/variables/cloud_fraction/shape[2]
+            </height>
+            <bandNumber>
+               root/groups/PRODUCT/variables/cloud_fraction/shape[1]
+            </bandNumber>
+            <data sampleModel="banded" type="'Float'">
+               fn:data(root/groups/PRODUCT/dataset/cloud_fraction/time/scanline/ground_pixel)               
+            </data>
+          </raster>
+      </img:descriptor>
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -382,6 +539,24 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__HCHO__.*</drb:nameMatch>
       </drb:signature>
+      <!-- Image descriptor -->  
+      <img:descriptor rdf:parseType="Literal">
+         <raster name="hcho">
+            <width>
+               root/groups/PRODUCT/variables/formaldehyde_tropospheric_vertical_column/shape[3]
+            </width>
+            <height>
+               root/groups/PRODUCT/variables/formaldehyde_tropospheric_vertical_column/shape[2]
+            </height>
+            <bandNumber>
+               root/groups/PRODUCT/variables/formaldehyde_tropospheric_vertical_column/shape[1]
+            </bandNumber>
+            <data sampleModel="banded" type="'Float'">
+               fn:data(root/groups/PRODUCT/dataset/formaldehyde_tropospheric_vertical_column/time/scanline/ground_pixel)               
+            </data>
+          </raster>
+      </img:descriptor>
+      
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -396,6 +571,23 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__SO2___.*</drb:nameMatch>
       </drb:signature>
+      <!-- Image descriptor -->  
+      <img:descriptor rdf:parseType="Literal">
+         <raster name="so2">
+            <width>
+               root/groups/PRODUCT/variables/sulfurdioxide_total_vertical_column/shape[3]
+            </width>
+            <height>
+               root/groups/PRODUCT/variables/sulfurdioxide_total_vertical_column/shape[2]
+            </height>
+            <bandNumber>
+               root/groups/PRODUCT/variables/sulfurdioxide_total_vertical_column/shape[1]
+            </bandNumber>
+            <data sampleModel="banded" type="'Float'">
+               fn:data(root/groups/PRODUCT/dataset/sulfurdioxide_total_vertical_column/time/scanline/ground_pixel)               
+            </data>
+          </raster>
+      </img:descriptor>
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -410,6 +602,23 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__O3____.*</drb:nameMatch>
       </drb:signature>
+      <!-- Image descriptor -->  
+      <img:descriptor rdf:parseType="Literal">
+         <raster name="o3">
+            <width>
+               root/groups/PRODUCT/variables/ozone_total_vertical_column/shape[3]
+            </width>
+            <height>
+               root/groups/PRODUCT/variables/ozone_total_vertical_column/shape[2]
+            </height>
+            <bandNumber>
+               root/groups/PRODUCT/variables/ozone_total_vertical_column/shape[1]
+            </bandNumber>
+            <data sampleModel="banded" type="'Float'">
+               fn:data(root/groups/PRODUCT/dataset/ozone_total_vertical_column/time/scanline/ground_pixel)               
+            </data>
+          </raster>
+      </img:descriptor>
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -424,6 +633,23 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__O3_TCL.*</drb:nameMatch>
       </drb:signature>
+      <!-- Image descriptor -->  
+      <img:descriptor rdf:parseType="Literal">
+         <raster name="o3tcl">
+            <width>
+               root/groups/PRODUCT/variables/ozone_tropospheric_vertical_column/shape[3]
+            </width>
+            <height>
+               root/groups/PRODUCT/variables/ozone_tropospheric_vertical_column/shape[2]
+            </height>
+            <bandNumber>
+               root/groups/PRODUCT/variables/ozone_tropospheric_vertical_column/shape[1]
+            </bandNumber>
+            <data sampleModel="banded" type="'Float'">
+               fn:data(root/groups/PRODUCT/dataset/ozone_tropospheric_vertical_column/time/latitude/longitude)               
+            </data>
+          </raster>
+      </img:descriptor>
    </owl:Class>
 
    <!-- ========================================= -->
@@ -440,6 +666,7 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._AUX.*</drb:nameMatch>
       </drb:signature>
+
    </owl:Class>
 
    <!-- ============================================================= -->
