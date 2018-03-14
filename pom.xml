@@ -23,6 +23,19 @@
          <artifactId>drbx-impl-netcdf</artifactId>
          <version>1.0.20</version>
       </dependency>
+      
+      <dependency>
+         <groupId>fr.gael.drb</groupId>
+         <artifactId>drbx-cortex</artifactId>
+         <version>1.0.5</version>
+      </dependency>
+      
+      <dependency>
+         <groupId>fr.gael.drb</groupId>
+         <artifactId>drbx-image</artifactId>
+         <version>1.9</version>
+      </dependency>
+
    </dependencies>
 
 </project>
