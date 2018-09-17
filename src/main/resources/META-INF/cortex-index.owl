@@ -843,7 +843,7 @@
                root/groups/PRODUCT/variables/ozone_tropospheric_vertical_column/shape[1]
             </bandNumber>
             <data sampleModel="banded" type="'Float'">
-               fn:data(root/groups/PRODUCT/dataset/ozone_tropospheric_vertical_column/time/latitude/longitude)               
+               fn:data(root/groups/PRODUCT/dataset/ozone_tropospheric_vertical_column/time/latitude_ccd/longitude_ccd)
             </data>
           </raster>
       </img:descriptor>
