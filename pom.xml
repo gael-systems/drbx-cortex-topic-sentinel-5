@@ -7,7 +7,7 @@
    <groupId>fr.gael.drb</groupId>
    <artifactId>drbx-cortex-topic-sentinel-5p</artifactId>
    <packaging>jar</packaging>
-   <version>2.0-SNAPSHOT</version>
+   <version>SNAPSHOT</version>
 
    <name>Drbx Cortex Topic for Sentinel-5P</name>
 
