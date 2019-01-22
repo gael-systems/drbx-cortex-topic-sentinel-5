@@ -21,8 +21,8 @@
 
 <!--
 * Data Hub Service (DHuS) - For Space data distribution.
-* Copyright (C) 2017 GAEL Systems
-* Copyright (C) 2017 ESA
+* Copyright (C) 2017-2019 GAEL Systems
+* Copyright (C) 2017-2019 ESA
 *
 * This file is part of DHuS software sources.
 *
@@ -276,7 +276,8 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__O3__PR.*</drb:nameMatch>
       </drb:signature>
-      <!-- Image descriptor -->  
+      <!-- Image descriptor -->
+      <!--
       <img:descriptor rdf:parseType="Literal">
          <raster name="o3profile">
             <width>
@@ -289,7 +290,7 @@
                root/groups/PRODUCT/variables/ozone_total_column/shape[1]
             </bandNumber>
             <data sampleModel="banded" type="float">
-               fn:data(root/groups/PRODUCT/dataset/ozone_total_column/time/scanline/ground_pixel)               
+               fn:data(root/groups/PRODUCT/dataset/ozone_total_column/time/scanline/ground_pixel)
             </data>
           </raster>
       </img:descriptor>
@@ -297,19 +298,20 @@
          <img:operator name="float-image" xmlns:img="&img;">
             <img:script>
                import fr.gael.drb.cortex.topic.sentinel5p.ScaleFloatToByte;
-               
+
                double nodata = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/ozone_total_column/attributes/_FillValue)");
                double offset = 0.0; // no offset defined in dataset
-      
+
                // Scale used is the factor value used to convert to DU (mol.m-2)
                double scale = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/ozone_total_column/attributes/multiplication_factor_to_convert_to_DU)");
-               
+
                return ScaleFloatToByte.scaleFloatToByte (source, nodata, scale, offset);
             </img:script>
          </img:operator>
       </img:rendering>
+      -->
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -324,7 +326,8 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__O3_TPR.*</drb:nameMatch>
       </drb:signature>
-      <!-- Image descriptor -->  
+      <!-- Image descriptor -->
+      <!--
       <img:descriptor rdf:parseType="Literal">
          <raster name="o3tclprofile">
             <width>
@@ -337,7 +340,7 @@
                root/groups/PRODUCT/variables/ozone_tropospheric_column/shape[1]
             </bandNumber>
             <data sampleModel="banded" type="float">
-               fn:data(root/groups/PRODUCT/dataset/ozone_tropospheric_column/time/scanline/ground_pixel)               
+               fn:data(root/groups/PRODUCT/dataset/ozone_tropospheric_column/time/scanline/ground_pixel)
             </data>
           </raster>
       </img:descriptor>
@@ -345,19 +348,20 @@
          <img:operator name="float-image" xmlns:img="&img;">
             <img:script>
                import fr.gael.drb.cortex.topic.sentinel5p.ScaleFloatToByte;
-               
+
                double nodata = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/ozone_tropospheric_column/attributes/_FillValue)");
                double offset = 0.0; // no offset defined in dataset
-      
+
                // Scale used is the factor value used to convert to DU (mol.m-2)
                double scale = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/ozone_tropospheric_column/attributes/multiplication_factor_to_convert_to_DU)");
-               
+
                return ScaleFloatToByte.scaleFloatToByte (source, nodata, scale, offset);
             </img:script>
          </img:operator>
       </img:rendering>
+      -->
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -372,7 +376,8 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__NO2___.*</drb:nameMatch>
       </drb:signature>
-      <!-- Image descriptor -->  
+      <!-- Image descriptor -->
+      <!--
       <img:descriptor rdf:parseType="Literal">
          <raster name="no2">
             <width>
@@ -385,7 +390,7 @@
                root/groups/PRODUCT/variables/nitrogendioxide_tropospheric_column/shape[1]
             </bandNumber>
             <data sampleModel="banded" type="'Float'">
-               fn:data(root/groups/PRODUCT/dataset/nitrogendioxide_tropospheric_column/time/scanline/ground_pixel)               
+               fn:data(root/groups/PRODUCT/dataset/nitrogendioxide_tropospheric_column/time/scanline/ground_pixel)
             </data>
           </raster>
       </img:descriptor>
@@ -393,18 +398,18 @@
          <img:operator name="float-image" xmlns:img="&img;">
             <img:script>
                import fr.gael.drb.cortex.topic.sentinel5p.ScaleFloatToByte;
-               
+
                double nodata = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/nitrogendioxide_tropospheric_column/attributes/_FillValue)");
                double offset = 0.0; // no offset defined in dataset
                // Scale used is the factor value used to convert to DU (mol.m-2)
                double scale = 1.0;
-               
+
                return ScaleFloatToByte.scaleFloatToByte (source, nodata, scale, offset);
             </img:script>
          </img:operator>
       </img:rendering>
-      
+      -->
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -419,7 +424,8 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__CH4___.*</drb:nameMatch>
       </drb:signature>
-      <!-- Image descriptor -->  
+      <!-- Image descriptor -->
+      <!--
       <img:descriptor rdf:parseType="Literal">
          <raster name="ch4">
             <width>
@@ -432,7 +438,7 @@
                root/groups/PRODUCT/variables/methane_mixing_ratio/shape[1]
             </bandNumber>
             <data sampleModel="banded" type="'Float'">
-               fn:data(root/groups/PRODUCT/dataset/methane_mixing_ratio/time/scanline/ground_pixel)               
+               fn:data(root/groups/PRODUCT/dataset/methane_mixing_ratio/time/scanline/ground_pixel)
             </data>
           </raster>
       </img:descriptor>
@@ -440,18 +446,19 @@
          <img:operator name="float-image" xmlns:img="&img;">
             <img:script>
                import fr.gael.drb.cortex.topic.sentinel5p.ScaleFloatToByte;
-               
+
                double nodata = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/methane_mixing_ratio/attributes/_FillValue)");
                double offset = 0.0; // no offset defined in dataset
-      
+
                // Scale used is the factor value used to convert to DU (mol.m-2)
                double scale = 1.0;
-               
+
                return ScaleFloatToByte.scaleFloatToByte (source, nodata, scale, offset);
             </img:script>
          </img:operator>
       </img:rendering>
+      -->
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -466,7 +473,8 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__CO____.*</drb:nameMatch>
       </drb:signature>
-      <!-- Image descriptor -->  
+      <!-- Image descriptor -->
+      <!--
       <img:descriptor rdf:parseType="Literal">
          <raster name="co">
             <width>
@@ -479,7 +487,7 @@
                root/groups/PRODUCT/variables/carbonmonoxide_total_column/shape[1]
             </bandNumber>
             <data sampleModel="banded" type="'Float'">
-               fn:data(root/groups/PRODUCT/dataset/carbonmonoxide_total_column/time/scanline/ground_pixel)               
+               fn:data(root/groups/PRODUCT/dataset/carbonmonoxide_total_column/time/scanline/ground_pixel)
             </data>
           </raster>
       </img:descriptor>
@@ -487,18 +495,19 @@
          <img:operator name="float-image" xmlns:img="&img;">
             <img:script>
                import fr.gael.drb.cortex.topic.sentinel5p.ScaleFloatToByte;
-               
+
                double nodata = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/carbonmonoxide_total_column/attributes/_FillValue)");
                double offset = 0.0; // no offset defined in dataset
-      
+
                // Scale used is the factor value used to convert to DU (mol.m-2)
                double scale = 1.0;
-               
+
                return ScaleFloatToByte.scaleFloatToByte (source, nodata, scale, offset);
             </img:script>
          </img:operator>
       </img:rendering>
+      -->
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -513,7 +522,8 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__AER_LH.*</drb:nameMatch>
       </drb:signature>
-      <!-- Image descriptor -->  
+      <!-- Image descriptor -->
+      <!--
       <img:descriptor rdf:parseType="Literal">
          <raster name="aerlh">
             <width>
@@ -526,7 +536,7 @@
                root/groups/PRODUCT/variables/aerosol_mid_height/shape[1]
             </bandNumber>
             <data sampleModel="banded" type="'Float'">
-               fn:data(root/groups/PRODUCT/dataset/aerosol_mid_height/time/scanline/ground_pixel)               
+               fn:data(root/groups/PRODUCT/dataset/aerosol_mid_height/time/scanline/ground_pixel)
             </data>
           </raster>
       </img:descriptor>
@@ -534,18 +544,19 @@
          <img:operator name="float-image" xmlns:img="&img;">
             <img:script>
                import fr.gael.drb.cortex.topic.sentinel5p.ScaleFloatToByte;
-               
+
                double nodata = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/aerosol_mid_height/attributes/_FillValue)");
                double offset = 0.0; // no offset defined in dataset
-      
+
                // Scale used is the factor value used to convert to DU (mol.m-2)
                double scale = 1.0;
-               
+
                return ScaleFloatToByte.scaleFloatToByte (source, nodata, scale, offset);
             </img:script>
          </img:operator>
       </img:rendering>
+      -->
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -560,7 +571,8 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__AER_AI.*</drb:nameMatch>
       </drb:signature>
-      <!-- Image descriptor -->  
+      <!-- Image descriptor -->
+      <!--
       <img:descriptor rdf:parseType="Literal">
          <raster name="aerai">
             <width>
@@ -573,7 +585,7 @@
                root/groups/PRODUCT/variables/aerosol_index_340_380/shape[1]
             </bandNumber>
             <data sampleModel="banded" type="'Float'">
-               fn:data(root/groups/PRODUCT/dataset/aerosol_index_340_380/time/scanline/ground_pixel)               
+               fn:data(root/groups/PRODUCT/dataset/aerosol_index_340_380/time/scanline/ground_pixel)
             </data>
           </raster>
       </img:descriptor>
@@ -581,18 +593,19 @@
          <img:operator name="float-image" xmlns:img="&img;">
             <img:script>
                import fr.gael.drb.cortex.topic.sentinel5p.ScaleFloatToByte;
-               
+
                double nodata = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/aerosol_index_340_380/attributes/_FillValue)");
                double offset = 0.0; // no offset defined in dataset
-      
+
                // Scale used is the factor value used to convert to DU (mol.m-2)
                double scale = 1.0;
-               
+
                return ScaleFloatToByte.scaleFloatToByte (source, nodata, scale, offset);
             </img:script>
          </img:operator>
       </img:rendering>
+      -->
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -607,7 +620,8 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__FRESCO.*</drb:nameMatch>
       </drb:signature>
-      <!-- Image descriptor -->  
+      <!-- Image descriptor -->
+      <!--
       <img:descriptor rdf:parseType="Literal">
          <raster name="fresco">
             <width>
@@ -620,7 +634,7 @@
                root/groups/PRODUCT/variables/cloud_fraction_crb/shape[1]
             </bandNumber>
             <data sampleModel="banded" type="'Float'">
-               fn:data(root/groups/PRODUCT/dataset/cloud_fraction_crb/time/scanline/ground_pixel)               
+               fn:data(root/groups/PRODUCT/dataset/cloud_fraction_crb/time/scanline/ground_pixel)
             </data>
           </raster>
       </img:descriptor>
@@ -628,18 +642,19 @@
          <img:operator name="float-image" xmlns:img="&img;">
             <img:script>
                import fr.gael.drb.cortex.topic.sentinel5p.ScaleFloatToByte;
-               
+
                double nodata = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/cloud_fraction_crb/attributes/_FillValue)");
                double offset = 0.0; // no offset defined in dataset
-      
+
                // Scale used is the factor value used to convert to DU (mol.m-2)
                double scale = 1.0;
-               
+
                return ScaleFloatToByte.scaleFloatToByte (source, nodata, scale, offset);
             </img:script>
          </img:operator>
-      </img:rendering>      
+      </img:rendering>
+      -->
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -654,8 +669,9 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__CLOUD_.*</drb:nameMatch>
       </drb:signature>
-      
-      <!-- Image descriptor -->  
+
+      <!-- Image descriptor -->
+      <!--
       <img:descriptor rdf:parseType="Literal">
          <raster name="cloud">
             <width>
@@ -668,7 +684,7 @@
                root/groups/PRODUCT/variables/cloud_fraction/shape[1]
             </bandNumber>
             <data sampleModel="banded" type="'Float'">
-               fn:data(root/groups/PRODUCT/dataset/cloud_fraction/time/scanline/ground_pixel)               
+               fn:data(root/groups/PRODUCT/dataset/cloud_fraction/time/scanline/ground_pixel)
             </data>
           </raster>
       </img:descriptor>
@@ -676,18 +692,19 @@
          <img:operator name="float-image" xmlns:img="&img;">
             <img:script>
                import fr.gael.drb.cortex.topic.sentinel5p.ScaleFloatToByte;
-               
+
                double nodata = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/cloud_fraction/attributes/_FillValue)");
                double offset = 0.0; // no offset defined in dataset
-      
+
                // Scale used is the factor value used to convert to DU (mol.m-2)
                double scale = 1.0;
-               
+
                return ScaleFloatToByte.scaleFloatToByte (source, nodata, scale, offset);
             </img:script>
          </img:operator>
-      </img:rendering>      
+      </img:rendering>
+      -->
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -702,7 +719,8 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__HCHO__.*</drb:nameMatch>
       </drb:signature>
-      <!-- Image descriptor -->  
+      <!-- Image descriptor -->
+      <!--
       <img:descriptor rdf:parseType="Literal">
          <raster name="hcho">
             <width>
@@ -715,7 +733,7 @@
                root/groups/PRODUCT/variables/formaldehyde_tropospheric_vertical_column/shape[1]
             </bandNumber>
             <data sampleModel="banded" type="'Float'">
-               fn:data(root/groups/PRODUCT/dataset/formaldehyde_tropospheric_vertical_column/time/scanline/ground_pixel)               
+               fn:data(root/groups/PRODUCT/dataset/formaldehyde_tropospheric_vertical_column/time/scanline/ground_pixel)
             </data>
           </raster>
       </img:descriptor>
@@ -723,20 +741,21 @@
          <img:operator name="float-image" xmlns:img="&img;">
             <img:script>
                import fr.gael.drb.cortex.topic.sentinel5p.ScaleFloatToByte;
-               
+
                double nodata = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/formaldehyde_tropospheric_vertical_column/attributes/_FillValue)");
                double offset = 0.0; // no offset defined in dataset
-      
+
                // Scale used is the factor value used to convert to DU (mol.m-2)
                double scale = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/formaldehyde_tropospheric_vertical_column/attributes/multiplication_factor_to_convert_to_DU)");
-               
-               
+
+
                return ScaleFloatToByte.scaleFloatToByte (source, nodata, scale, offset);
             </img:script>
          </img:operator>
-      </img:rendering>      
+      </img:rendering>
+      -->
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -751,7 +770,8 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__SO2___.*</drb:nameMatch>
       </drb:signature>
-      <!-- Image descriptor -->  
+      <!-- Image descriptor -->
+      <!--
       <img:descriptor rdf:parseType="Literal">
          <raster name="so2">
             <width>
@@ -764,7 +784,7 @@
                root/groups/PRODUCT/variables/sulfurdioxide_total_vertical_column/shape[1]
             </bandNumber>
             <data sampleModel="banded" type="'Float'">
-               fn:data(root/groups/PRODUCT/dataset/sulfurdioxide_total_vertical_column/time/scanline/ground_pixel)               
+               fn:data(root/groups/PRODUCT/dataset/sulfurdioxide_total_vertical_column/time/scanline/ground_pixel)
             </data>
           </raster>
       </img:descriptor>
@@ -772,20 +792,21 @@
          <img:operator name="float-image" xmlns:img="&img;">
             <img:script>
                import fr.gael.drb.cortex.topic.sentinel5p.ScaleFloatToByte;
-               
+
                double nodata = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/sulfurdioxide_total_vertical_column/attributes/_FillValue)");
                double offset = 0.0; // no offset defined in dataset
-      
+
                // Scale used is the factor value used to convert to DU (mol.m-2)
                double scale = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/sulfurdioxide_total_vertical_column/attributes/multiplication_factor_to_convert_to_DU)");
-               
-               
+
+
                return ScaleFloatToByte.scaleFloatToByte (source, nodata, scale, offset);
             </img:script>
          </img:operator>
       </img:rendering>
+      -->
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -800,7 +821,8 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__O3____.*</drb:nameMatch>
       </drb:signature>
-      <!-- Image descriptor -->  
+      <!-- Image descriptor -->
+      <!--
       <img:descriptor rdf:parseType="Literal">
          <raster name="o3">
             <width>
@@ -813,7 +835,7 @@
                root/groups/PRODUCT/variables/ozone_total_vertical_column/shape[1]
             </bandNumber>
             <data sampleModel="banded" type="'Float'">
-               fn:data(root/groups/PRODUCT/dataset/ozone_total_vertical_column/time/scanline/ground_pixel)               
+               fn:data(root/groups/PRODUCT/dataset/ozone_total_vertical_column/time/scanline/ground_pixel)
             </data>
           </raster>
       </img:descriptor>
@@ -821,19 +843,20 @@
          <img:operator name="float-image" xmlns:img="&img;">
             <img:script>
                import fr.gael.drb.cortex.topic.sentinel5p.ScaleFloatToByte;
-               
+
                double nodata = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/ozone_total_vertical_column/attributes/_FillValue)");
                double offset = 0.0; // no offset defined in dataset
-      
+
                // Scale used is the factor value used to convert to DU (mol.m-2)
                double scale = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/ozone_total_vertical_column/attributes/multiplication_factor_to_convert_to_DU)");
-               
+
                return ScaleFloatToByte.scaleFloatToByte (source, nodata, scale, offset);
             </img:script>
          </img:operator>
       </img:rendering>
+      -->
    </owl:Class>
 
    <!-- ============================================================= -->
@@ -848,7 +871,8 @@
       <drb:signature rdf:parseType="Resource">
          <drb:nameMatch>(?i)S5P_...._L2__O3_TCL.*</drb:nameMatch>
       </drb:signature>
-      <!-- Image descriptor -->  
+      <!-- Image descriptor -->
+      <!--
       <img:descriptor rdf:parseType="Literal">
          <raster name="o3tcl">
             <width>
@@ -869,19 +893,20 @@
          <img:operator name="float-image" xmlns:img="&img;">
             <img:script>
                import fr.gael.drb.cortex.topic.sentinel5p.ScaleFloatToByte;
-               
+
                double nodata = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/ozone_tropospheric_vertical_column/attributes/_FillValue)");
                double offset = 0.0; // no offset defined in dataset
-      
+
                // Scale used is the factor value used to convert to DU (mol.m-2)
                double scale = ScaleFloatToByte.extract(source,
                   "fn:data(root/groups/PRODUCT/variables/ozone_tropospheric_vertical_column/attributes/multiplication_factor_to_convert_to_DU)");
-               
+
                return ScaleFloatToByte.scaleFloatToByte (source, nodata, scale, offset);
             </img:script>
          </img:operator>
       </img:rendering>
+      -->
    </owl:Class>
 
    <!-- ========================================= -->
